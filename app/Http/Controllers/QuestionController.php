@@ -6,6 +6,7 @@ use App\Http\Resources\QuestionResource;
 use App\Model\Question;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class QuestionController extends Controller
 {

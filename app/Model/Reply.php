@@ -7,9 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
 {
+    protected $guarded = [];
+    //protected $fillable = ['body', 'question_id', 'user_id'];
+    
     public function question()
     {
         return $this->belongsTo(Question::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     public function like()
@@ -17,8 +25,4 @@ class Reply extends Model
         return $this->hasMany(Like::class);
     }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }
